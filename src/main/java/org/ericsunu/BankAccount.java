@@ -13,12 +13,16 @@ public class BankAccount {
         return balance;
     }
 
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
     // Deposits a positive amount into the account.
     public void deposit(double amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("Deposit amount must be positive");
         }
-        balance += amount;
+        balance = balance + amount;
     }
 
     // Withdraws a positive amount if sufficient funds are available.
